@@ -34,12 +34,17 @@
   </style>
   <script>
     function handleButtonClick() {
-      // Redirect to Shopee after a 2-second delay
-     
-        window.open ('https://shope.ee/8KPkxajuVn');
+      // Redirect to Shopee app if installed, fallback to web URL if not
+      var appUrl = 'shopee://shopee.com.my/product/148120148/23444172276';
+      var webUrl = 'https://shope.ee/8KPkxajuVn';
 
-      // Open a new tab with the "https://osini.co/incomeTanpaJual" URL
-      // window.open('https://osini.co/incomeTanpaJual');
+      // Open the Shopee app using the intent:// URL scheme
+      window.location.href = appUrl;
+
+      // Redirect to the web URL after a 2-second delay (fallback for devices without the Shopee app)
+      setTimeout(function() {
+        window.location.href = webUrl;
+      }, 2000);
     }
   </script>
 </head>
