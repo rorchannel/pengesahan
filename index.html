@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Click to Redirect</title>
+  <title>page pengesahan</title>
   <style>
     body {
-      background-color: #f2f2f2; /* Set the background color to a more convincing shade */
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
       margin: 0;
-      padding: 0;
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
     }
 
-    h1 {
+    .header {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 40px;
+      color: #333;
       text-align: center;
-      margin-bottom: 20px;
+    }
+
+    .glowing-emoji {
+      animation: glowing 2s linear infinite;
+    }
+
+    @keyframes glowing {
+      0% {
+        box-shadow: 0 0 5px #777;
+      }
+      50% {
+        box-shadow: 0 0 20px #777;
+      }
+      100% {
+        box-shadow: 0 0 5px #777;
+      }
     }
 
     .button {
@@ -24,32 +43,31 @@
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
-      background-color: #FFD700;
+      background-color: #777;
+      background-image: linear-gradient(to bottom right, #ddd 0%, #777 100%);
       color: #fff;
       font-size: 16px;
       font-weight: bold;
       text-decoration: none;
-      animation: blink 1.5s infinite;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .button:hover {
+      transform: scale(1.1);
     }
   </style>
   <script>
     function handleButtonClick() {
-      // Redirect to Shopee app if installed, fallback to web URL if not
-      var appUrl = 'shopee://shopee.com.my/product/148120148/23444172276';
-      var webUrl = 'https://shope.ee/8KPkxajuVn';
+      // Open a new tab with the YouTube URL
+      window.open('https://invl.io/clkgjab?url=https%3A%2F%2Fshopee.com.my%2Funiversal-link%2F', '_blank');
 
-      // Open the Shopee app using the intent:// URL scheme
-      window.location.href = appUrl;
-
-      // Redirect to the web URL after a 2-second delay (fallback for devices without the Shopee app)
-      setTimeout(function() {
-        window.location.href = webUrl;
-      }, 2000);
+      // Redirect the current page to the Google URL
+      window.location.href = 'https://app.yoodo.com.my/assets/index.html?gad_source=1&gclid=CjwKCAiA1fqrBhA1EiwAMU5m_1UIOnPy5sACqznucx-7wtioJlXup_9qqfq5P2Ac-JYK3Le66KgTehoCZPEQAvD_BwE#signUp/requiredToSignUp';
     }
   </script>
 </head>
 <body>
-  <h1>Klik butang pengesahan dibawah</h1>
-  <button class="button" onclick="handleButtonClick();">I'm not a robot</button>
+  <h1 class="header">Klik butang pengesahan dibawah <span class="glowing-emoji">👇</span></h1>
+  <button class="button" onclick="handleButtonClick();">Saya bukan robot</button>
 </body>
 </html>
